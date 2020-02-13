@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const arrayOfWords = ['cucumber', 'tomatos', 'avocado'];
+        const complicatedArray = ['cucumber', 44, true];
+
+
+        // function makeAllCaps(){
+        //     let bahagia= arrayOfWords.map(data=> data.toUpperCase());
+        //     return bahagia;
+        // }
+        // function sort(){
+        //     let iya= arrayOfWords.sort();
+        //     return iya;
+        // }
+        // console.log(makeAllCaps());
+        // console.log(sort());
+
+
+        const makeAllCaps = dataArray => {
+            return new Promise((resolve, reject) => {
+                try {
+                    let allCaps = dataArray.map(data => data.toString().toUpperCase());
+                    resolve(allCaps);
+                } catch (e) {
+                    reject("Error : Failed to uppercase");
+                }
+            })
+        }
+
+        const sortWords = dataArray => {
+            return new Promise((resolve, reject) => {
+                try {
+                    let allSorted = dataArray.sort();
+                    resolve(allSorted);
+                } catch (e) {
+                    reject("Error : Failed to sort");
+                }
+            })
+        }
+
+
+
+        makeAllCaps(arrayOfWords).then(variable => {
+            console.log("MakeAllCaps: ", variable);
+        })
+
+        sortWords(arrayOfWords).then(variable => {
+            console.log("Sorted Array: ", variable)
+        })
+
+        makeAllCaps(complicatedArray).then(variable => {
+            console.log("MakeAllCaps: ", variable);
+        })
+        
+        sortWords(complicatedArray).then(variable => {
+            console.log("Sorted Array: ", variable)
+        })
+    // makeAllCaps(arrayOfWords)
+    // .then(sort())
+
+    //  makeAllCaps=()=> let bahagia= arrayOfWords.map(data=> data.toUpperCase());
+    // console.log(bahasia());
+    </script>
+</body>
+
+</html>

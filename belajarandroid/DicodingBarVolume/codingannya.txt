@@ -1,0 +1,156 @@
+volume bar dicoding
+
+Main activity.java{
+package com.example.dicodingbarvolume;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+  private  EditText edtWidth, edtHeight,edtLength;
+  private   Button btnCalculate;
+  private   TextView tvResult;
+
+
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        edtWidth = findViewById(R.id.edt_width);
+        edtHeight = findViewById(R.id.edt_height);
+        edtLength= findViewById(R.id.edt_length);
+        btnCalculate = findViewById(R.id.btn_calculate);
+        tvResult=findViewById(R.id.tv_result);
+
+    btnCalculate.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.btn_calculate) {
+            String inputLength = edtLength.getText().toString().trim();
+            String inputWidth = edtWidth.getText().toString().trim();
+            String inputHeight = edtHeight.getText().toString().trim();
+            boolean isEmptyFields = false;
+            boolean isInvalidDouble = false;
+            if (TextUtils.isEmpty(inputLength)) {
+                isEmptyFields = true;
+                edtLength.setError("Field ini tidak boleh kosong");
+            }
+            if (TextUtils.isEmpty(inputWidth)) {
+                isEmptyFields = true;
+                edtWidth.setError("Field ini tidak boleh kosong");
+            }
+            if (TextUtils.isEmpty(inputHeight)) {
+                isEmptyFields = true;
+                edtHeight.setError("Field ini tidak boleh kosong");
+            }
+            Double length = Double.parseDouble(inputLength);
+            Double width = Double.parseDouble(inputWidth);
+            Double height = Double.parseDouble(inputHeight);
+            if (length == null) {
+                isInvalidDouble = true;
+                edtLength.setError("Field ini harus berupa nomer yang valid");
+            }
+            if (width == null) {
+                isInvalidDouble = true;
+                edtWidth.setError("Field ini harus berupa nomer yang valid");
+            }
+            if (height == null) {
+                isInvalidDouble = true;
+                edtHeight.setError("Field ini harus berupa nomer yang valid");
+            }
+            if (!isEmptyFields && !isInvalidDouble) {
+                double volume = length * width * height;
+                tvResult.setText(String.valueOf(volume));
+            }
+        }
+    }
+    private Double parseDouble(String str) {
+        try {
+            return Double.valueOf(str);
+        } catch (NumberFormatException e) {
+            return null;
+        }
+    }
+}
+}
+
+Activity main.xml{
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/length"/>
+
+    <EditText
+        android:id="@+id/edt_length"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:lines="1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/width"/>
+
+    <EditText
+        android:id="@+id/edt_width"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:lines="1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/height"/>
+
+    <EditText
+        android:id="@+id/edt_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:lines="1"/>
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate"/>
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/result"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+</LinearLayout>
+}
+
+
+
+
+
+
+
+

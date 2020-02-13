@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PreviewActivity">
+
+
+    <TextView
+        android:id="@+id/judulpreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Preview Data Nasabah"
+        android:textAlignment="center"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/emailpreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_below="@+id/judulpreview"
+        android:layout_marginTop="40dp"/>
+    <TextView
+        android:id="@+id/passwordpreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_below="@+id/emailpreview"
+        android:layout_marginTop="40dp"/>
+</RelativeLayout>

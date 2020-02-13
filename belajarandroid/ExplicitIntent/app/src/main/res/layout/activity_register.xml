@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/registerjudul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register Nasabah"
+        android:textAlignment="center"
+        android:textSize="26dp"/>
+    <EditText
+        android:id="@+id/emailreg"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/registerjudul"
+        android:layout_marginTop="50dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"/>
+    <EditText
+        android:id="@+id/namereg"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/emailreg"
+        android:layout_marginTop="50dp"
+        android:hint="Name"
+        android:inputType="textPersonName"/>
+    <EditText
+        android:id="@+id/passwordreg"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/namereg"
+        android:layout_marginTop="50dp"
+        android:hint="Password"
+        android:inputType="textPassword"/>
+    <Button
+        android:id="@+id/btnsubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordreg"
+        android:layout_centerHorizontal="true"
+        android:text="Submit"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bgbutton"/>
+
+
+</RelativeLayout>

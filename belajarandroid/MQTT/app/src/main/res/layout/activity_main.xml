@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.MainActivity">
+
+    <TextView
+        android:id="@+id/tvtopik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Topik"
+        android:textSize="30dp" />
+    <EditText
+        android:id="@+id/topikEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvtopik"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="70dp"/>
+    <TextView
+        android:id="@+id/tvmessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Message"
+        android:layout_below="@+id/tvtopik"
+        android:layout_marginTop="40dp"
+        android:textSize="30dp" />
+    <EditText
+        android:id="@+id/messageEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvtopik"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="70dp"
+        android:layout_below="@+id/topikEditText"/>
+    <TextView
+        android:id="@+id/tvnama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama"
+        android:layout_below="@id/tvmessage"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/namaEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tvnama"
+        android:layout_below="@id/messageEditText"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/alamatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvnama"
+        android:text="Alamat"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/namaEditText"
+        android:layout_marginLeft="63dp"
+        android:layout_toRightOf="@id/alamatTextView"
+        android:layout_marginTop="20dp"
+        android:id="@+id/alamatEditText"/>
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alamatEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="SEND"
+        android:background="@color/colorPrimary"/>
+    <TextView
+        android:id="@+id/juduldaftarnasabah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/sendButton"
+        android:text="Daftar Nasabah"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"/>
+    <ListView
+        android:id="@+id/nasabahListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/juduldaftarnasabah"/>
+
+    <TextView
+        android:id="@+id/connectTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@color/colorPrimary"
+        android:gravity="bottom"
+        android:text="ConnectMQTT"
+        android:textSize="30dp" />
+
+</RelativeLayout>

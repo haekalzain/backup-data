@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.AboutActivity">
+
+    <ImageView
+        android:id="@+id/fotohaekal"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:src="@drawable/haekal"
+        android:layout_marginTop="50dp"
+        />
+    <TextView
+        android:id="@+id/namalengkap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Haekal Zainputra Salahuddin"
+        android:layout_below="@id/fotohaekal"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="32dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="haekalzain1910@gmail.com"
+        android:layout_below="@id/namalengkap"
+        android:layout_marginTop="20dp"
+        android:textSize="32dp"
+        android:textColor="@color/colorPrimary"/>
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:scaleType="fitXY"
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/hintnama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama Pemain"
+        android:layout_below="@id/foto"
+        android:textSize="35dp"/>
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hintnama"
+        android:hint="xxxxxxxx"
+        android:textColor="@color/colorAccent"
+        android:textSize="35dp"/>
+
+    <TextView
+        android:id="@+id/hintnegara"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Asal Negara "
+        android:layout_below="@id/nama"
+        android:textSize="35dp"/>
+    <TextView
+        android:id="@+id/negara"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="blablabla"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@id/hintnegara"
+        android:textSize="35dp"/>
+    <TextView
+        android:id="@+id/hinttanggallahir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tanggal Lahir "
+        android:layout_below="@id/negara"
+        android:textSize="35dp"/>
+    <TextView
+        android:id="@+id/tanggallahir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="blablabla"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@id/hinttanggallahir"
+        android:textSize="35dp"/>
+    <TextView
+        android:id="@+id/detail"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tanggallahir"
+        android:hint="lalalalla"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"/>
+
+
+
+
+</RelativeLayout>
+
+</ScrollView>

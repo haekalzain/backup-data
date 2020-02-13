@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/judulutama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Nasabah"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        />
+    <ListView
+        android:id="@+id/listviewutama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnrefresh"/>
+    <Button
+        android:id="@+id/btnrefresh"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judulutama"
+        android:text="Refresh Data"
+        android:background="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/btncreatemain"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/judulutama"
+        android:text="Create Data"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/btnrefresh"
+        android:background="@color/colorPrimary"/>
+</RelativeLayout>

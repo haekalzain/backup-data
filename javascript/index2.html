@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <input type="text" name="text" value="aaaa">
+    <p> ini paragraph atas</p>
+    <button class="button"> Click me</button>
+    <script type="text/javascript">
+         console.log(document.getElementsByClassName("button"))
+        $('.button').click(function (event, target) {
+            //jquery
+            this.style.backgroundColor = 'papayawhip'
+
+            $('p').css("border", "solid 1px red");
+            //js pure
+            console.log(document.getElementsByTagName("input")[0].value)
+
+            //jquery
+            console.log($('input[name="text"]'))
+            $('input').css("background-color", "red");
+            console.log("clicked!")
+        })
+        //manipulasi via console log untuk membuat button
+        var btn = documen.createElement("button");
+        btn.innerHTML="Click ME 2";
+        $('body')[0].appendChild(btn)
+
+        //manipulasi via console log untuk membuat input type txt
+        var inpt= document.createElement("input");
+        inpt.type="text";
+        inpt.name="inputtext"
+        $('form')[0].appendChild(inpt)
+
+    </script>
+
+</body>
+
+</html>

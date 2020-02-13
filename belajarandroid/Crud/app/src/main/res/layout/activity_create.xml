@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/judulketiga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daftar Nasabah"
+        android:textAlignment="center"
+        android:textSize="30dp"/>
+    <ImageView
+        android:layout_below="@+id/judulketiga"
+        android:id="@+id/fotoorangdesc"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/boss"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+
+        />
+    <TextView
+        android:id="@+id/topikview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fotoorangdesc"
+        android:hint="Topik"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/topikEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/topikview"
+        android:layout_below="@id/fotoorangdesc"
+        android:hint="Topik"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+
+        />
+
+    <TextView
+        android:id="@+id/namaview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topikEditText"
+        android:hint="Nama"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/editnamacreate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/namaview"
+        android:layout_below="@id/topikEditText"
+        android:hint="Nama"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+
+        />
+    <TextView
+        android:id="@+id/alamatview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/namaview"
+        android:hint="Alamat"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/editalamatcreate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/alamatview"
+        android:layout_below="@id/editnamacreate"
+        android:hint="Alamat"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="3dp"/>
+
+    <TextView
+        android:id="@+id/emailview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alamatview"
+        android:hint="Email"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/editemailcreate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/emailview"
+        android:layout_below="@id/editalamatcreate"
+        android:hint="Voicemail"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="3dp"/>
+    <Button
+        android:id="@+id/btncreate"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editemailcreate"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="90dp"
+        android:text="Create"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"/>
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btncreate"
+        android:layout_centerHorizontal="true"
+        android:text="publish mqtt"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        android:id="@+id/btnpublishmqtt"/>
+
+
+
+
+</RelativeLayout>

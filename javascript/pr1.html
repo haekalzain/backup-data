@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class Shape{
+        constructor(x,y){
+            let id;
+            this.x=x;
+            this.y=y;
+        }
+        move(){
+            return this.x + this.y;
+        }
+    }
+
+    class Rectangle extends Shape{
+        constructor(x,y){
+            super(x,y);
+            let id;
+            this.width = x;
+            this.height = y;
+
+        }
+    }
+
+    class Circle extends Shape{
+        constructor(x,y){
+            super(x,y);
+            this.x=x;
+            this.y=y;
+            let radius;
+            let id;
+        }
+    }
+
+    class Eye extends Circle{
+        constructor(color,rollAmount){
+            super(color,rollAmount);
+            this.color=color;
+            this.rollAmount=rollAmount;
+        }
+
+        Roll(){
+            return this.move() + this.rollAmount;
+        }
+    }
+
+    let shp= new Shape(2,3);
+    console.log(shp.move());
+    let rct= new Rectangle(3,4);
+    console.log(rct);
+
+    </script>
+</body>
+</html>

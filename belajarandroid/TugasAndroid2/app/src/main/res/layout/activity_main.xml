@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.MainActivity"
+    >
+
+    <include
+        android:id="@+id/headermain"
+        layout="@layout/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/salam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headermain"
+        android:text="Hi, HAEKAL"
+        android:textSize="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"/>
+    <RelativeLayout
+        android:id="@+id/garis1"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_below="@+id/salam"
+        android:background="@color/abuabu"/>
+    <include
+        android:id="@+id/ewalletcenter"
+        layout="@layout/ewallet_center"
+        android:layout_below="@id/garis1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+    <RelativeLayout
+        android:id="@+id/garis2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/ewalletcenter"
+        android:background="@color/abuabu"/>
+    <RelativeLayout
+        android:id="@+id/garis3"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/garis2"
+        android:background="@color/colorPrimary"/>
+
+<include
+    android:id="@+id/inout"
+    layout="@layout/inout"
+    android:layout_below="@id/garis3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:id="@+id/garis4"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/inout"
+        android:background="@color/abuabu"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/garis4"/>
+
+
+
+</RelativeLayout>

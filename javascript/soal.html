@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="soalarray"></p>
+    <script type="text/javascript">
+        const VideoData = [
+            {
+                name: 'Miss Scarlet',
+                present: true,
+                room: [
+                    { kitchen: false }, { ballrom: false }, { conservatory: false }, { 'dining room': false }, { 'billiard room': false }, { library: false }
+                ]
+            },
+            {
+                name: 'Mrs.White',
+                present: false,
+                room: [
+                    { kitchen: false }, { ballrom: false }, { conservatory: true }, { 'dining room': false }, { 'billiard room': false }, { library: false }
+                ]
+            },
+            {
+                name: 'Reverand Green',
+                present: true,
+                room: [
+                    { kitchen: false }, { ballrom: false }, { conservatory: false }, { 'dining room': false }, { 'billiard room': false }, { library: false }
+                ]
+            },
+            {
+                name: 'Rusty',
+                present: false,
+                room: [
+                    { kitchen: false }, { ballrom: false }, { conservatory: true }, { 'dining room': false }, { 'billiard room': false }, { library: false }
+                ]
+            },
+            {
+                name: "Colonel Mustard",
+                present: true,
+                room: [
+                    { kitchen: false }, { ballrom: false }, { conservatory: false }, { 'dining room': false }, { 'billiard room': false }, { library: false }
+                ]
+            },
+
+            {
+                name: "Professor Plum",
+                present: true,
+                room: [
+                    { kitchen: false }, { ballrom: false }, { conservatory: false }, { 'dining room': false }, { 'billiard room': false }, { library: false }
+                ]
+            }
+
+        ]
+
+        //filter
+        var newFilter = VideoData.filter(data=> data.room[2].conservatory ==true);
+
+        console.log("newArray: ", newFilter);
+
+        //map
+        let dataMap = VideoData.map(data=> "Alm. " + data.name )
+            console.log(dataMap);
+        //map ambil seluruh data
+        let dataMap2 = VideoData.map(data=> {
+            return{
+                nama:"Alm " + data.name,
+                present : data.present,
+                room : data.room,
+                fullname : data.name +" " + data.present
+            }
+        } )
+            console.log(dataMap2);
+        
+        // reduce
+        const pricelist=[{
+            nama:"jambu",
+            harga:10000
+        },
+        {
+            nama: " apel",
+            harga:2000
+        },{
+            nama:"jeruk",
+            harga:15000
+        }]
+        
+        let dataReduce = pricelist.reduce((total,data) => total+= data.harga,90);
+        console.log("data reduce= " + dataReduce)
+
+        
+    </script>
+</body>
+
+</html>
+
+
+
+const VideoData=[
+{
+name:'Miss Scarlet',
+present: true,
+room:[
+{kitchen:false},{ballrom:false},{conservatory:false},{'dining room':false},{'billiard room':false},{library:false}
+]
+},
+{
+name:'Mrs.White',
+present: false,
+room:[
+{kitchen:false},{ballrom:false},{conservatory:true},{'dining room':false},{'billiard room':false},{library:false}
+]
+},
+{
+name:'Reverand Green',
+present: true,
+room:[
+{kitchen:false},{ballrom:false},{conservatory:false},{'dining room':false},{'billiard room':false},{library:false}
+]
+},
+{
+name:'Rusty',
+present: false,
+room:[
+{kitchen:false},{ballrom:false},{conservatory:true},{'dining room':false},{'billiard room':false},{library:false}
+]
+},
+{
+name:"Colonel Mustard",
+present: true,
+room:[
+{kitchen:false},{ballrom:false},{conservatory:true},{'dining room':false},{'billiard room':false},{library:false}
+]
+},
+
+{
+name:"Professor Plum",
+present: true,
+room:[
+{kitchen:false},{ballrom:false},{conservatory:false},{'dining room':false},{'billiard room':false},{library:false}
+]
+},
+
+
+
+
+
+
+]
